@@ -74,13 +74,14 @@ Sigue estos pasos para configurar y correr la aplicación localmente:
 ## Uso
 
 Puedes usar las siguentes rutas:
-
-POST api/auth/login             //iniciar sesion
-POST api/auth/signup            //registro de usuarios
-GET api/employee                //listar empleados
-GET api/employee/{employee}     //ver 1 empleado
-PUT api/employee/{employee}     //actualizar empleado
-DELETE api/employee/{employee}  //eliminar empleado
+```bash
+POST api/auth/login             #iniciar sesion
+POST api/auth/signup            #registro de usuarios
+GET api/employee                #listar empleados
+GET api/employee/{employee}     #ver 1 empleado
+PUT api/employee/{employee}     #actualizar empleado
+DELETE api/employee/{employee}  #eliminar empleado
+ ```
 
 o puedes usar el comando de artisan:
 php artisan route:list
