@@ -46,7 +46,7 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Employee_Create_Request $request): RedirectResponse
+    public function store(Employee_Create_Request $request)
     {
         $validated = $request->validated();
         // Retrieve a portion of the validated input data...
@@ -83,6 +83,7 @@ class EmployeeController extends Controller
     public function update(Employee_Update_Request $request, Employee $employee)
     {
         $employee->fill($request->all());
+        $employee->save();
 
         return (new EmployeeResource($employee))
         ->response()

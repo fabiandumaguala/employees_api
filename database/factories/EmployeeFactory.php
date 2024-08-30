@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 use App\Models\Employee;
+use App\Models\User;
 use Illuminate\Support\Str;
 
 class EmployeeFactory extends Factory
@@ -23,6 +24,7 @@ class EmployeeFactory extends Factory
             'email'    => $this->faker->unique()->safeEmail,
             'position' => $this->faker->jobTitle,
             'salary'   => $this->faker->randomFloat(2, 30000, 100000),
+            'user_id'  => User::factory(),
         ];
     }
 }

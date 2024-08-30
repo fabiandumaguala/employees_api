@@ -13,7 +13,7 @@ class Employee_Update_Request extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class Employee_Update_Request extends FormRequest
     {
         return [
             'name'     => 'required|string|max:255',
-            'email'    => 'required|string|email|max:255|unique:employees,'. $this->id,
+            // 'email'    => 'required|string|email|max:255|unique:employees,'. $this->id,
             'position' => 'required|string|max:255',
             'salary'   => 'required|numeric|between:0,999999.99',
         ];

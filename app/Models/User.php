@@ -48,6 +48,10 @@ class User extends Authenticatable implements JWTSubject
         'password',
     ];
 
+    public function employees(){
+    	return $this->hasMany('App\Employee');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -19,7 +19,15 @@ class Employee extends Model
         'email',
         'position',
         'salary',
+        'user_id',
     ];
+
+    /**
+     * Relations ships
+     */
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 
     public function scopeSearch($query, $search){
 		return $query->where('name', 'LIKE', "%$search%")
