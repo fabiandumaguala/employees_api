@@ -84,4 +84,7 @@ DELETE api/employee/{employee}  #eliminar empleado
  ```
 
 o puedes usar el comando de artisan:
+
+```bash
 php artisan route:list
+ ```
