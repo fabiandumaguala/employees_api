@@ -22,11 +22,16 @@ Route::group([
     'prefix' => 'auth'
 
 ], function ($router) {
-
     Route::post('signup',  'Api\Auth\AuthController@signup');
     Route::post('login',   'Api\Auth\AuthController@login');
     Route::post('logout',  'Api\Auth\AuthController@logout');
     Route::post('refresh', 'Api\Auth\AuthController@refresh');
     Route::post('me',      'Api\Auth\AuthController@me');
+});
 
+Route::group([
+    'middleware' => 'jwt.auth'
+], function ($router) {
+    //Employee
+	Route::apiresource('employee', 'Api\EmployeeController');
 });
