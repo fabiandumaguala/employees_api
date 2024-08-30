@@ -16,7 +16,7 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
 
     /*
-    |--------------------------------------------------------------------------
+    |--------------------------------------------------------------ze------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Guayaquil',
 
     /*
     |--------------------------------------------------------------------------
@@ -229,7 +229,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
     ],
 
 ];
